@@ -176,11 +176,82 @@
   }
 }
 
+.arrival-page {
+    min-height: 100vh;
+    background: #f8f1e6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.arrival-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+#bangaloreCountdown {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(60px, 10vw, 110px);
+    font-weight: bold;
+
+    color: #d66b72;
+
+    margin: 20px 0;
+}
+
+.arrival-content p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin-top: 35px;
+}
+
+.countdown-shortcut {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 253, 248, 0.92);
+
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    z-index: 10;
+
+    transition: transform 0.2s ease;
+}
+
+.countdown-shortcut:hover {
+    transform: scale(1.1);
+}
+
+
 </style></head><body>
 
 <section class="hero" id="start">
   <img src="flowers_front.png" alt="">
   <a class="hero-hotspot" href="#hinge" aria-label="Let's begin"></a>
+  <a class="countdown-shortcut" href="#countdown">
+    🌽
+  </a>
 </section>
 <section class="match" id="hinge"><div class="hinge">Hinge</div><div class="people">
 <div class="person"><img src="rakshit.jpg"><div>Rakshit</div></div><div class="heart">♥</div><div class="person"><img src="aditi.jpg"><div>Aditi</div></div></div>
@@ -273,6 +344,25 @@
 </section>
 
 
+<!-- BANGALORE COUNTDOWN STARTS HERE -->
+
+<section class="arrival-page" id="countdown">
+
+  <div class="arrival-content">
+
+    <h2>Until I'm back with you </h2>
+
+    <div id="bangaloreCountdown">
+      Loading...
+    </div>
+
+    <p>Berlin -> Bangalore</p>
+
+  </div>
+
+</section>
+
+
 <script>
 function updateLoveCounter() {
 
@@ -329,6 +419,46 @@ function updateLoveCounter() {
 }
 
 updateLoveCounter();
+
+
+
+function updateBangaloreCountdown() {
+
+  const arrivalDate = new Date(2026, 11, 10);
+  const today = new Date();
+
+  today.setHours(0, 0, 0, 0);
+  arrivalDate.setHours(0, 0, 0, 0);
+
+  const millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+  const daysLeft = Math.ceil(
+    (arrivalDate - today) / millisecondsPerDay
+  );
+
+  const counter =
+    document.getElementById("bangaloreCountdown");
+
+  if (daysLeft > 1) {
+    counter.textContent = daysLeft + " days";
+  }
+  else if (daysLeft === 1) {
+    counter.textContent = "1 day";
+  }
+  else if (daysLeft === 0) {
+    counter.textContent = "TODAY ❤️";
+  }
+  else {
+    counter.textContent = "I'm home ❤️";
+  }
+}
+
+updateBangaloreCountdown();
+
+
+
+
+
 </script>
 
 </body></html>
