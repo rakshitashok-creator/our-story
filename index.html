@@ -1,0 +1,334 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Aditi</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6efe5;color:#302820;font-family:Georgia,serif}section{min-height:100vh}
+.hero{position:relative;background:#171313;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero img{width:100%;height:100vh;object-fit:contain;display:block}
+
+.match{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:#fffaf4}
+.hinge{font:700 clamp(36px,8vw,68px) Arial,sans-serif;letter-spacing:-4px;margin-bottom:8px}.tag{font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin-bottom:42px}
+.people{display:flex;align-items:center;gap:clamp(18px,5vw,55px);margin:15px 0 25px}.person img{width:clamp(115px,22vw,190px);height:clamp(115px,22vw,190px);border-radius:50%;object-fit:cover;border:5px solid white;box-shadow:0 8px 30px #0002}.person div{font:600 15px Arial,sans-serif;margin-top:12px}.heart{font-size:clamp(30px,6vw,52px);color:#c86d75}
+.match h1{font-size:clamp(34px,7vw,64px);margin:18px 0 12px;font-style:italic}.sub{opacity:.7}.btn{display:inline-block;margin-top:28px;padding:15px 26px;border-radius:999px;background:#bd7078;color:white;text-decoration:none;font:600 14px Arial,sans-serif}
+.datepage{max-width:900px;margin:auto;padding:30px 24px 75px;background:#f8f1e6;box-shadow:0 0 45px #00000012}.logoarea{text-align:center}.logo{width:min(430px,85vw);height:190px;object-fit:cover;object-position:center;mix-blend-mode:multiply}.date{font:700 22px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:16px 0 14px;color:#7f3f45}.rule{width:46px;height:1px;background:#886b55;margin:0 auto 36px}.letter{max-width:660px;margin:auto;font-size:clamp(17px,2vw,20px);line-height:1.78}p{margin:0 0 23px}.ending{font-style:italic;font-size:1.08em;margin-top:34px}
+@media(max-width:600px){.hero img{object-fit:cover}.people{gap:12px}.datepage{padding:18px 20px 55px}.logo{height:150px}.letter{line-height:1.66}}
+
+.hero-hotspot{
+  position:absolute;
+  left:50%;
+  bottom:4.7%;
+  transform:translateX(-50%);
+  width:min(340px,58vw);
+  height:86px;
+  border-radius:999px;
+  display:block;
+}
+
+
+.ride-link{text-align:center;margin:42px 0 10px}
+.ride-btn{background:#bd7078}
+.ridepage{background:#f8f1e6;display:flex;align-items:flex-start;justify-content:center;padding:0}
+.ridepage img{width:min(100%,1024px);height:auto;display:block}
+
+
+.ride-wrap{position:relative;width:min(100%,1024px);margin:auto}
+.ride-wrap img{width:100%;height:auto;display:block}
+.heart-hotspot{
+  position:absolute;
+  left:50%;
+  bottom:5.5%;
+  transform:translateX(-50%);
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  cursor:pointer;
+}
+.memories-page{
+  min-height:100vh;
+  overflow:hidden;
+  background:#f8f1e6;
+  position:relative;
+  padding:28px 0;
+}
+.memory-track{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  animation:memoryDrift 75s linear infinite;
+  will-change:transform;
+}
+.memory-grid{
+  width:min(1100px,94vw);
+  margin:0 auto;
+  columns:3 280px;
+  column-gap:22px;
+}
+.memory-card{
+  break-inside:avoid;
+  margin:0 0 22px;
+  padding:8px 8px 22px;
+  background:#fffdf8;
+  border:1px solid rgba(75,50,35,.12);
+  box-shadow:0 10px 24px rgba(63,42,28,.12);
+  border-radius:4px;
+}
+.memory-card img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:2px;
+}
+.tilt-1{transform:rotate(-1.2deg)}
+.tilt-2{transform:rotate(.8deg)}
+.tilt-3{transform:rotate(-.5deg)}
+.tilt-4{transform:rotate(1.1deg)}
+.tilt-5{transform:rotate(-.8deg)}
+@keyframes memoryDrift{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-50%)}
+}
+.memories-page:hover .memory-track{animation-play-state:paused}
+@media (max-width:700px){
+  .heart-hotspot{width:70px;height:70px;bottom:4.5%}
+  .memory-grid{columns:2 150px;column-gap:12px}
+  .memory-card{margin-bottom:12px;padding:5px 5px 14px}
+  .memory-track{animation-duration:95s}
+}
+@media (prefers-reduced-motion: reduce){
+  .memory-track{animation:none}
+}
+
+/* Together counter page */
+.together-page{
+  min-height:100vh;
+  background:#f8f1e6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+.together-content{
+  max-width:900px;
+  width:100%;
+}
+
+.together-title{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:clamp(30px,5vw,58px);
+  font-weight:normal;
+  color:#332b2b;
+  margin:0 0 50px;
+}
+
+.love-counter{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.time-box{
+  min-width:130px;
+  padding:25px 20px;
+  background:#fffdf8;
+  border:1px solid rgba(75,50,35,.12);
+  box-shadow:0 10px 24px rgba(63,42,28,.10);
+  border-radius:10px;
+}
+
+.time-number{
+  display:block;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:48px;
+  color:#d66b72;
+}
+
+.time-label{
+  display:block;
+  margin-top:8px;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:17px;
+  color:#554747;
+}
+
+.together-message{
+  margin-top:55px;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:clamp(20px,3vw,30px);
+  line-height:1.5;
+  color:#332b2b;
+}
+
+.together-heart{
+  margin-top:25px;
+  font-size:50px;
+}
+
+@media (max-width:700px){
+  .time-box{
+    min-width:105px;
+    padding:20px 12px;
+  }
+
+  .time-number{
+    font-size:38px;
+  }
+}
+
+</style></head><body>
+
+<section class="hero" id="start">
+  <img src="flowers_front.png" alt="">
+  <a class="hero-hotspot" href="#hinge" aria-label="Let's begin"></a>
+</section>
+<section class="match" id="hinge"><div class="hinge">Hinge</div><div class="people">
+<div class="person"><img src="rakshit.jpg"><div>Rakshit</div></div><div class="heart">♥</div><div class="person"><img src="aditi.jpg"><div>Aditi</div></div></div>
+<h1>It’s a match.</h1><a class="btn" href="#hoc">So… when are we meeting? →</a></section>
+<section id="hoc" class="datepage"><div class="logoarea"><img class="logo" src="house_of_commons.png"><div class="date">11 September 2021</div><div class="rule"></div></div>
+<article class="letter"><p>I am so glad that we decided to meet that day. I had so much fun chatting about random stuff.</p><p>I first sat across from you because I thought that’s what people do on first dates, but it made me happy when you asked me to sit next to you so we could hear each other better.</p><p>You told me about yourself, and you were also so curious about me. I’ve never felt like anyone has ever wanted to know me more than you did. Even though it was the first time we met, you were so nice to me and kept asking me questions.</p><p>I remember going to the washroom and thinking about how sweet you were as a person.</p><p>Googling first-date questions to ask each other was an amazing idea too. I’m still not sure whose idea it was.</p><p>We spoke soooo much that we ended up staying at the bar until, after some tequila shots, we were finally asked to leave. 😂</p><p>It was such an amazing day, and thinking about it takes me back to a time before our relationship had even begun.</p><p>Thank you for coming out with me and showing me such a good time. You were amazing.</p><p class="ending"><strong>I wish I could relive that day with you. ❤️</strong></p></article><div class="ride-link"><a class="btn ride-btn" href="#ride-home">RIDE HOME →</a></div></section>
+
+
+<section id="ride-home" class="ridepage">
+  <div class="ride-wrap">
+    <img src="ride_home.png" alt="Our ride home">
+    <a class="heart-hotspot" href="#memories" aria-label="Open our memories"></a>
+  </div>
+</section>
+
+
+<section id="memories" class="memories-page">
+  <div class="memory-track">
+    <div class="memory-grid">
+      <figure class="memory-card tilt-1"><img src="memory_01.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_02.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_03.jpg" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_04.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_05.jpg" alt=""></figure>
+<figure class="memory-card tilt-1"><img src="memory_06.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_07.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_08.webp" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_09.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_10.jpg" alt=""></figure>
+<figure class="memory-card tilt-1"><img src="memory_11.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_12.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_13.jpg" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_14.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_15.jpg" alt=""></figure>
+    </div>
+    <div class="memory-grid" aria-hidden="true">
+      <figure class="memory-card tilt-1"><img src="memory_01.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_02.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_03.jpg" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_04.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_05.jpg" alt=""></figure>
+<figure class="memory-card tilt-1"><img src="memory_06.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_07.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_08.webp" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_09.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_10.jpg" alt=""></figure>
+<figure class="memory-card tilt-1"><img src="memory_11.jpg" alt=""></figure>
+<figure class="memory-card tilt-2"><img src="memory_12.jpg" alt=""></figure>
+<figure class="memory-card tilt-3"><img src="memory_13.jpg" alt=""></figure>
+<figure class="memory-card tilt-4"><img src="memory_14.jpg" alt=""></figure>
+<figure class="memory-card tilt-5"><img src="memory_15.jpg" alt=""></figure>
+    </div>
+  </div>
+</section>
+
+<section id="together" class="together-page">
+  <div class="together-content">
+
+    <h2 class="together-title">It has been...</h2>
+
+    <div class="love-counter">
+
+      <div class="time-box">
+        <span class="time-number" id="years">0</span>
+        <span class="time-label">years</span>
+      </div>
+
+      <div class="time-box">
+        <span class="time-number" id="months">0</span>
+        <span class="time-label">months</span>
+      </div>
+
+    
+      
+
+      <div class="time-box">
+        <span class="time-number" id="days">0</span>
+        <span class="time-label">days</span>
+      </div>
+
+    </div>
+
+    <div class="together-message">
+      Since our first date!
+    </div>
+
+    <div class="together-heart">❤️</div>
+
+  </div>
+</section>
+
+
+<script>
+function updateLoveCounter() {
+
+  // Our first date: 11 September 2021
+  const startDate = new Date(2021, 8, 11);
+  const today = new Date();
+
+  // Remove time-of-day from the calculation
+  today.setHours(0, 0, 0, 0);
+  startDate.setHours(0, 0, 0, 0);
+
+  let cursor = new Date(startDate);
+
+  // YEARS
+  let years = today.getFullYear() - cursor.getFullYear();
+
+  let testDate = new Date(cursor);
+  testDate.setFullYear(testDate.getFullYear() + years);
+
+  if (testDate > today) {
+    years--;
+  }
+
+  cursor.setFullYear(cursor.getFullYear() + years);
+
+  // MONTHS
+  let months =
+    (today.getFullYear() - cursor.getFullYear()) * 12 +
+    (today.getMonth() - cursor.getMonth());
+
+  testDate = new Date(cursor);
+  testDate.setMonth(testDate.getMonth() + months);
+
+  if (testDate > today) {
+    months--;
+  }
+
+  cursor.setMonth(cursor.getMonth() + months);
+
+  // REMAINING DAYS
+  const millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+  let remainingDays = Math.floor(
+    (today - cursor) / millisecondsPerDay
+  );
+
+  // Convert remaining days into weeks + days
+  const weeks = Math.floor(remainingDays / 7);
+  const days = remainingDays % 7;
+
+  document.getElementById("years").textContent = years;
+  document.getElementById("months").textContent = months;
+  document.getElementById("days").textContent = days;
+}
+
+updateLoveCounter();
+</script>
+
+</body></html>
