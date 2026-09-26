@@ -370,7 +370,6 @@ function updateLoveCounter() {
   const startDate = new Date(2021, 8, 11);
   const today = new Date();
 
-  // Remove time-of-day from the calculation
   today.setHours(0, 0, 0, 0);
   startDate.setHours(0, 0, 0, 0);
 
@@ -405,13 +404,9 @@ function updateLoveCounter() {
   // REMAINING DAYS
   const millisecondsPerDay = 1000 * 60 * 60 * 24;
 
-  let remainingDays = Math.floor(
+  const days = Math.round(
     (today - cursor) / millisecondsPerDay
   );
-
-  // Convert remaining days into weeks + days
-  const weeks = Math.floor(remainingDays / 7);
-  const days = remainingDays % 7;
 
   document.getElementById("years").textContent = years;
   document.getElementById("months").textContent = months;
